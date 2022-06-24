@@ -1,0 +1,32 @@
+# Using prebuilt libs or local
+usePrebuiltLibraries=false
+# The application Id
+applicationId=vn.teko.android.core.testapp
+# The group
+group=vn.teko.android.core
+# The version of the application
+versionName=0.2.0
+# The version Code of the application
+versionCode=1
+# The Instrumentation Runner
+testInstrumentationRunner=androidx.test.runner.AndroidJUnitRunner
+# Is Multidex enabled
+multiDex=true
+# Is Vector Drawable Supported?
+supportVectorDrawable=true
+# Build Tools Version
+buildToolsVersion=29.0.2
+# Compile SDK Version
+compileSdkVersion=29
+# Min SDK Version
+minSdkVersion=16
+# Target SDK Version
+targetSdkVersion=29
+# Repo type
+repoType=framework
+# Repo name
+repoName=vnshop-android
+# Maven Artifact Name
+artifactName=TerraAndroidSdk
+# Maven Uri
+artifactUri=https://maven.pkg.github.com/teko-vn/terra-sdk-android
