@@ -1,0 +1,19 @@
+{
+  "name": "demo-mini-app-react-native",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "yarn react-native start"
+  },
+  "dependencies": {
+    "@terra-js/react-native-bridge": "^0.1.0-alpha.3",
+    "@terra-js/app": "0.1.0-alpha.6",
+    "@terra-js/payment-kit": "0.1.0-alpha.5",
+    "@terra-js/terra-kit": "0.1.0-alpha.12",
+    "@terra-js/web-bridge": "0.1.0",
+    "react": "17.0.2",
+    "react-native": "0.66.4",
+    "react-redux": "^7.2.5"
+  },
+  "license": "ISC"
+}

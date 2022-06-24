@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="lineItem"
+            type="vn.teko.sandbox.nativeminiapptest.cart.CartManager.LineItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivProductImage"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="@dimen/margin_padding_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tool:background="@drawable/cart_placeholder_img" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvProductName"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_padding_small"
+            android:layout_marginStart="@dimen/margin_padding_small"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@{lineItem.product.productInfo.name}"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivProductImage"
+            app:layout_constraintTop_toTopOf="parent"
+            tool:text='Laptop MICROSOFT Surface Pro X 13 WiFi+LTE MJX-00001 ( 13" Microsoft SQ1/8GB/128GB SSD/Windows 10/0.8kg)' />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvProductPrice"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_padding_small"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/colorError"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivProductImage"
+            app:layout_constraintTop_toBottomOf="@id/tvQuantity"
+            tool:text='100000' />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvQuantity"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_padding_small"
+            android:ellipsize="end"
+            android:maxLines="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivProductImage"
+            app:layout_constraintTop_toBottomOf="@id/tvProductName"
+            tool:text='100000' />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
