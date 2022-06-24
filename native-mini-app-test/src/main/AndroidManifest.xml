@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="vn.teko.sandbox.nativeminiapptest">
+
+    <application>
+        <activity
+            android:name=".ui.MiniAppShoppingActivity"
+            android:theme="@style/CustomNoActionBar" />
+    </application>
+
+</manifest>

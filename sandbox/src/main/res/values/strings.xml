@@ -1,0 +1,48 @@
+<resources>
+    // common
+    <string name="common_error">Có lỗi xảy ra</string>
+    <string name="common_dialog_title">Thông báo</string>
+    <string name="common_close">Đóng</string>
+    <string name="common_confirm">Xác nhận</string>
+    <string name="common_yes">Có</string>
+    <string name="common_no">Không</string>
+
+    // scenario
+    <string name="scenario_type_default">Mở mini app chưa cần đăng nhập</string>
+    <string name="scenario_type_authentication">Mở mini app yêu cầu đăng nhập</string>
+    <string name="scenario_type_payment">Thanh toán đơn hàng</string>
+
+    // mini app types
+    <string name="mini_app_type_react_native">React Native</string>
+    <string name="mini_app_type_native">Native</string>
+    <string name="mini_app_type_web">Web</string>
+
+    // error
+    <string name="mini_app_not_found_error">Không tìm thấy mini app</string>
+    <string name="exchange_token_failed">Có lỗi xảy ra khi Exchange Token</string>
+    <string name="missing_access_token">Thiếu cài đặt Access Token</string>
+    <string name="empty_mini_app_code_error">Vui lòng nhập mini-app code!</string>
+    <string name="not_logged_in">Vui lòng đăng nhập để mở mini-app này!</string>
+
+    // authentication
+    <string name="login">Đăng nhập</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="succeed_login">Đăng nhập thành công</string>
+    <string name="failed_logout_message">Đăng xuất thất bại</string>
+    <string name="succeed_logout_message">Đăng xuất thành công</string>
+
+    <string name="app_name">sandbox-android-app</string>
+    <string name="hello">XIN CHÀO!</string>
+    <string name="select_the_scenario">Chọn tình huống kiểm thử</string>
+    <string name="select_the_mini_app_type">Chọn loại Mini App</string>
+    <string name="open_mini_app">Mở Mini App</string>
+    <string name="sandbox_app_version">Sandbox Super App v%s</string>
+    <string name="confirm_switch_scenario">Bạn có muốn đổi Scenario hay không?</string>
+    <string name="enter_mini_app_hint">Nhập mã mini app của bạn</string>
+    <string name="enter_mini_app_title">Mini App Code</string>
+    <string name="use_default">Sử dụng code mặc định</string>
+    <string name="enter_web_mini_app_url_title">Url của mini app web</string>
+    <string name="enter_web_mini_app_url_hint">Nhập url của mini app web</string>
+    <string name="web_mini_app_url_hint"><![CDATA[Các giá trị hợp lệ của url:<ul><li><b>Sử dụng localhost: http://localhost:&lt;port&gt;</b>, ví dụ: <span style="color:blue;">http://localhost:3000</span>. <b>Chú ý forward port từ máy tính sang điện thoại</b>.</li><li><b>Sử dụng local IP của máy tính </b>, ví dụ: <span style="color:blue;">http://192.168.1.36:3000</span>. Không cần forward port.</li><li><b>Sử dụng url đã deploy</b>, ví dụ: <span style="color:blue;">https://your-website.com.vn</span></li></ul>]]></string>
+
+</resources>

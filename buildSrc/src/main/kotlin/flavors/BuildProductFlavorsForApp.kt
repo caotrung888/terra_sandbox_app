@@ -1,0 +1,83 @@
+package flavors
+
+import com.android.build.gradle.internal.dsl.ProductFlavor
+
+fun ProductFlavor.buildDevelopForApp() {
+  dimension = BuildProductDimensions.ENVIRONMENT
+  buildConfigField("String", "BASE_IMAGE_URL", "\"https://catalog-dev.phongvu.vn\"")
+  buildConfigField("String", "PREF_NAME", "\"pos_pref_dev\"")
+  buildConfigField("String", "DB_NAME", "\"pos_db_dev\"")
+  buildConfigField("Integer", "DEFAULT_CHANNEL_ID", "6")
+  buildConfigField("String", "DEFAULT_CHANNEL", "\"vnshop_online\"")
+  buildConfigField("String", "DEFAULT_TERMINAL", "\"vnshop_app\"")
+  buildConfigField("String", "STN_APP_ID", "\"vnshop-consumer\"")
+  buildConfigField("String", "CLIENT_CODE", "\"vnshop\"")
+  buildConfigField("String", "BANNER_TOKEN", "\"QETEKOF6416C75C866FDB348EABB\"")
+  buildConfigField("String", "MARKET_CODE", "\"playstore\"")
+  buildConfigField("String", "NOTIFICATION_CHANNEL_ID", "\"vnshop_default_channel\"")
+  buildConfigField("Integer", "TEST_ARGUMENT_LEVEL", "2")
+  buildConfigField("String", "TRACKING_CLIENT_ID", "\"0dccc7a2-3103-11ea-978f-2e728ce88125\"")
+  buildConfigField("String", "BASE_TRACKING_URL", "\"https://tracking.develop.tekoapis.net/\"")
+  buildConfigField("String", "PRODUCT_CODE", "\"vnshop\"")
+  buildConfigField("String", "PLATFORM_CODE", "\"android\"")
+  buildConfigField("String", "FIREBASE_AUTH_EMAIL", "\"vnshop.consumertest@teko.vn\"")
+  buildConfigField("String", "FIREBASE_AUTH_PWD", "\"HJLzb7&3/j4>2*\\\"s\"")
+  buildConfigField("Integer", "FIREBASE_REMOTE_CONFIG_INTERVAL", "10")
+  buildConfigField("String", "DEFAULT_PANDORA_CONFIG_FILE", "\"pandora_dev_response.json\"")
+}
+
+fun ProductFlavor.buildStagingForApp() {
+  dimension = BuildProductDimensions.ENVIRONMENT
+  buildConfigField("String", "BASE_IMAGE_URL", "\"https://catalog-stg.phongvu.vn\"")
+  buildConfigField("String", "PREF_NAME", "\"pos_pref_stg\"")
+  buildConfigField("String", "DB_NAME", "\"pos_db_stg\"")
+  buildConfigField("Integer", "DEFAULT_CHANNEL_ID", "6")
+  buildConfigField("String", "DEFAULT_CHANNEL", "\"vnshop_online\"")
+  buildConfigField("String", "DEFAULT_TERMINAL", "\"vnshop_app\"")
+  buildConfigField("String", "STN_APP_ID", "\"vnshop-consumer\"")
+  buildConfigField("String", "CLIENT_CODE", "\"vnshop\"")
+  buildConfigField("String", "BANNER_TOKEN", "\"QETEKOF6416C75C866FDB348EABB\"")
+  buildConfigField("String", "MARKET_CODE", "\"playstore\"")
+  buildConfigField("String", "NOTIFICATION_CHANNEL_ID", "\"vnshop_default_channel\"")
+  buildConfigField("Integer", "TEST_ARGUMENT_LEVEL", "2")
+  buildConfigField("String", "TRACKING_CLIENT_ID", "\"0dccc7a2-3103-11ea-978f-2e728ce88125\"")
+  buildConfigField("String", "BASE_TRACKING_URL", "\"https://tracking.develop.tekoapis.net/\"")
+  buildConfigField("String", "PRODUCT_CODE", "\"vnshop\"")
+  buildConfigField("String", "PLATFORM_CODE", "\"android\"")
+  buildConfigField("String", "FIREBASE_AUTH_EMAIL", "\"vnshop.consumertest@teko.vn\"")
+  buildConfigField("String", "FIREBASE_AUTH_PWD", "\"HJLzb7&3/j4>2*\\\"s\"")
+  buildConfigField("Integer", "FIREBASE_REMOTE_CONFIG_INTERVAL", "10")
+  buildConfigField("String", "DEFAULT_PANDORA_CONFIG_FILE", "\"pandora_dev_response.json\"")
+  buildConfigField("String", "PAYMENT_VNPAY_PARNER_CODE", "\"VNPAY\"")
+  buildConfigField("String", "PAYMENT_SPOS_PARNER_CODE", "\"VNPAY\"")
+  buildConfigField("String", "PAYMENT_CASH_PARNER_CODE", "\"PHONGVU\"")
+  buildConfigField("String", "PAYMENT_SPOS_MERCHANT_CODE", "\"4814\"")
+}
+
+fun ProductFlavor.buildProductionForApp() {
+  dimension = BuildProductDimensions.ENVIRONMENT
+  buildConfigField("String", "BASE_IMAGE_URL", "\"https://img.vnshop.vn\"")
+  buildConfigField("String", "PREF_NAME", "\"pos_pref\"")
+  buildConfigField("String", "DB_NAME", "\"pos_db\"")
+  buildConfigField("Integer", "DEFAULT_CHANNEL_ID", "6")
+  buildConfigField("String", "DEFAULT_CHANNEL", "\"vnshop_online\"")
+  buildConfigField("String", "DEFAULT_TERMINAL", "\"vnshop_app\"")
+  buildConfigField("String", "STN_APP_ID", "\"vnshop-consumer\"")
+  buildConfigField("String", "CLIENT_CODE", "\"vnshop\"")
+  buildConfigField("String", "BANNER_TOKEN", "\"QUEYCPKVSKIDYGUCWPVBSCEWSCEZ6A\"")
+  buildConfigField("String", "MARKET_CODE", "\"playstore\"")
+  buildConfigField("String", "NOTIFICATION_CHANNEL_ID", "\"vnshop_default_channel\"")
+  buildConfigField("Integer", "TEST_ARGUMENT_LEVEL", "2")
+  buildConfigField("String", "TRACKING_CLIENT_ID", "\"0dccc7a2-3103-11ea-978f-2e728ce88125\"")
+  buildConfigField("String", "BASE_TRACKING_URL", "\"https://tracking.tekoapis.com/\"")
+  buildConfigField("String", "PRODUCT_CODE", "\"vnshop\"")
+  buildConfigField("String", "PLATFORM_CODE", "\"android\"")
+  buildConfigField("String", "FIREBASE_AUTH_EMAIL", "\"vnshop.consumertest@teko.vn\"")
+  buildConfigField("String", "FIREBASE_AUTH_PWD", "\"HJLzb7&3/j4>2*\\\"s\"")
+  buildConfigField("Integer", "FIREBASE_REMOTE_CONFIG_INTERVAL", "1800")
+  buildConfigField("String", "DEFAULT_PANDORA_CONFIG_FILE", "\"pandora_production_response.json\"")
+  buildConfigField("String", "PAYMENT_VNPAY_PARNER_CODE", "\"VNPAY\"")
+  buildConfigField("String", "PAYMENT_SPOS_PARNER_CODE", "\"VNPAY\"")
+  buildConfigField("String", "PAYMENT_CASH_PARNER_CODE", "\"PHONGVU\"")
+  buildConfigField("String", "PAYMENT_SPOS_MERCHANT_CODE", "\"5045\"")
+}

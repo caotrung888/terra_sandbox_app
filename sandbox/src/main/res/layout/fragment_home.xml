@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="vn.teko.sandbox.BuildConfig" />
+
+        <import type="vn.teko.sandbox.R" />
+
+        <import type="vn.teko.hestia.core.model.AppType" />
+
+        <variable
+            name="viewModel"
+            type="vn.teko.sandbox.ui.home.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <vn.teko.apollo.component.navigation.header.ApolloAppHeader
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/af_util_header_height"
+            app:title="@string/hello"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rightIcon="@drawable/apollo_ic_q_a_24"
+            app:showBottomDivider="false" />
+
+        <ScrollView
+            android:id="@+id/miniAppOptions"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/af_util_margin_padding_default"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintBottom_toTopOf="@id/btnOpenMiniApp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <vn.teko.apollo.component.common.ApolloTextView
+                    android:id="@+id/tvSelectScenario"
+                    style="@style/ApolloSubtitle4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/af_util_margin_padding_large"
+                    android:layout_marginTop="@dimen/af_util_margin_padding_default"
+                    android:layout_marginEnd="@dimen/af_util_margin_padding_large"
+                    android:text="@string/select_the_scenario"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <vn.teko.apollo.component.spinner.ApolloDropdown
+                    android:id="@+id/ddScenario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/af_util_margin_padding_large"
+                    android:layout_marginTop="@dimen/af_util_margin_padding_tiny"
+                    android:layout_marginEnd="@dimen/af_util_margin_padding_large"
+                    app:layout_constraintTop_toBottomOf="@id/tvSelectScenario" />
+
+                <vn.teko.apollo.component.common.ApolloTextView
+                    android:id="@+id/tvSelectMiniAppType"
+                    style="@style/ApolloSubtitle4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/af_util_margin_padding_large"
+                    android:layout_marginTop="@dimen/af_util_margin_padding_default"
+                    android:layout_marginEnd="@dimen/af_util_margin_padding_large"
+                    android:text="@string/select_the_mini_app_type"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ddScenario" />
+
+                <vn.teko.apollo.component.spinner.ApolloDropdown
+                    android:id="@+id/ddMiniAppType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/af_util_margin_padding_large"
+                    android:layout_marginTop="@dimen/af_util_margin_padding_tiny"
+                    android:layout_marginEnd="@dimen/af_util_margin_padding_large"
+                    app:layout_constraintTop_toBottomOf="@id/tvSelectMiniAppType" />
+
+                <vn.teko.apollo.component.common.ApolloTextView
+                    android:id="@+id/tvEnterCode"
+                    style="@style/ApolloSubtitle4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/af_util_margin_padding_large"
+                    android:layout_marginTop="@dimen/af_util_margin_padding_default"
+                    android:layout_marginEnd="@dimen/af_util_margin_padding_large"
+                    android:text="@string/enter_mini_app_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ddMiniAppType" />
+
+                <vn.teko.apollo.component.button.ApolloButton
+                    style="@style/ApolloSubtitle4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> viewModel.resetAppCode()}"
+                    android:text="@string/use_default"
+                    app:layout_constraintBottom_toBottomOf="@id/tvEnterCode"
+                    app:layout_constraintEnd_toEndOf="@id/ffMiniAppCode"
+                    app:type="link" />
+
+                <vn.teko.apollo.component.input.ApolloFormField
+                    android:id="@+id/ffMiniAppCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/af_util_margin_padding_large"
+                    android:layout_marginTop="@dimen/af_util_margin_padding_tiny"
+                    android:layout_marginEnd="@dimen/af_util_margin_padding_large"
+                    android:imeOptions="actionDone"
+                    android:lines="1"
+                    android:hint="@string/enter_mini_app_hint"
+                    android:text="@={viewModel.miniAppCode}"
+                    app:layout_constraintTop_toBottomOf="@id/tvEnterCode" />
+
+                <vn.teko.apollo.component.common.ApolloTextView
+                    android:id="@+id/tvEnterWebMiniAppUrl"
+                    style="@style/ApolloSubtitle4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/af_util_margin_padding_large"
+                    android:layout_marginTop="@dimen/af_util_margin_padding_default"
+                    android:layout_marginEnd="@dimen/af_util_margin_padding_large"
+                    android:text="@string/enter_web_mini_app_url_title"
+                    app:isVisible="@{viewModel.currentMiniAppType == AppType.WebView}"
+                    app:layout_constraintTop_toBottomOf="@id/ffMiniAppCode" />
+
+                <vn.teko.apollo.component.input.ApolloFormField
+                    android:id="@+id/ffWebMiniAppUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/af_util_margin_padding_large"
+                    android:layout_marginTop="@dimen/af_util_margin_padding_tiny"
+                    android:layout_marginEnd="@dimen/af_util_margin_padding_large"
+                    android:imeOptions="actionDone"
+                    android:lines="1"
+                    android:hint="@string/enter_web_mini_app_url_hint"
+                    android:text="@={viewModel.customWebMiniAppUrl}"
+                    app:layout_constraintTop_toBottomOf="@id/tvEnterWebMiniAppUrl"
+                    app:isVisible="@{viewModel.currentMiniAppType == AppType.WebView}" />
+
+                <vn.teko.apollo.component.common.ApolloTextView
+                    android:id="@+id/tvWebMiniAppUrlHint"
+                    style="@style/ApolloCaption1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/af_util_margin_padding_large"
+                    android:layout_marginTop="@dimen/af_util_margin_padding_tiny"
+                    android:layout_marginEnd="@dimen/af_util_margin_padding_large"
+                    app:isVisible="@{viewModel.currentMiniAppType == AppType.WebView}"
+                    app:layout_constraintTop_toBottomOf="@id/ffWebMiniAppUrl" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+        <vn.teko.apollo.component.button.ApolloButton
+            android:id="@+id/btnOpenMiniApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/af_util_margin_padding_default_larger"
+            android:text="@string/open_mini_app"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btnLogin" />
+
+        <vn.teko.apollo.component.button.ApolloButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/af_util_margin_padding_larger"
+            android:layout_marginEnd="@dimen/af_util_margin_padding_larger"
+            android:layout_marginBottom="@dimen/af_util_margin_padding_default_smaller"
+            android:onClick="@{() -> viewModel.handleLogin()}"
+            android:text="@{context.getString(viewModel.isLogged ? R.string.logout : R.string.login)}"
+            app:isVisible="@{viewModel.showLoginButton}"
+            app:layout_constraintBottom_toTopOf="@id/tvVersion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/af_util_margin_padding_small"
+            android:background="@drawable/top_shadow_gradient"
+            app:layout_constraintBottom_toTopOf="@id/tvVersion" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvVersion"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/af_util_margin_padding_ultra"
+            android:background="@color/colorTransparent"
+            android:gravity="center"
+            android:text="@{@string/sandbox_app_version(BuildConfig.VERSION_NAME)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="Sandbox Super App v1.0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

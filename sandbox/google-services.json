@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "127353225225",
+    "firebase_url": "https://teko-super-app.firebaseio.com",
+    "project_id": "teko-super-app",
+    "storage_bucket": "teko-super-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:127353225225:android:a48e300dc63f8f142d38d8",
+        "android_client_info": {
+          "package_name": "vn.teko.android.superapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "127353225225-dl1dkbm4c4q7pae64oh7d8rel19undjh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.teko.android.superapp",
+            "certificate_hash": "addd845c163e5f8932ff571eda4601eafa13f74b"
+          }
+        },
+        {
+          "client_id": "127353225225-jncun1638j2s65j3heh9u0ihjtjchrei.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.teko.android.superapp",
+            "certificate_hash": "999a7eeb3a799b0446dd429117d29fe9aea8fded"
+          }
+        },
+        {
+          "client_id": "127353225225-k8q3cphquil46iui1heej7o99t4a8hlb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6PyaCKcUcqBxARtnOug2nOsDKcX7t2ok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "127353225225-k8q3cphquil46iui1heej7o99t4a8hlb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "127353225225-o3cnd43i0bn55fcqm8qpj58a5ee6kq69.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "vn.teko.ios.superapptemplate"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

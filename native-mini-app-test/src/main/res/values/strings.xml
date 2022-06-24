@@ -1,0 +1,19 @@
+<resources>
+    <string name="hello">Hello Everyone. I\'m a Mini App</string>
+    <string name="title_scenario_1">Scenario 1</string>
+    <string name="title_scenario_2">Scenario 2</string>
+    <string name="title_scenario_3">Scenario 3</string>
+    <string name="home">Trang chủ</string>
+    <string name="cart">Giỏ hàng</string>
+    <string name="added_to_cart">Đã thêm vào giỏ </string>
+    <string name="quantity">Số lượng: %d</string>
+    <string name="payment">Thanh toán</string>
+    <string name="payment_confirm">Số tiền: %s \nMã: %s</string>
+    <string name="OK">OK</string>
+    <string name="yes">Có</string>
+    <string name="cancel">Huỷ</string>
+    <string name="cancelled_payment">Đơn hàng chưa thanh toán</string>
+    <string name="success_payment">Thanh toán thành công</string>
+    <string name="failed_payment">Thanh toán thất bại</string>
+
+</resources>
